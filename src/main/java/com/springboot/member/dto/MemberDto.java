@@ -4,12 +4,14 @@ import com.springboot.member.entity.Member;
 import com.springboot.stamp.Stamp;
 import com.springboot.validator.NotSpace;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
+@Builder
 public class MemberDto {
     @Getter
     @AllArgsConstructor // TODO 테스트를 위해 추가됨
@@ -27,6 +29,7 @@ public class MemberDto {
     }
 
     @Getter
+    @Builder
     public static class Patch {
         private long memberId;
 
